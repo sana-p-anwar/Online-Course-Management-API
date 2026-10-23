@@ -1,0 +1,78 @@
+###
+GET http://127.0.0.1:8000/courses/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/courses/
+Content-Type: application/json
+
+{
+    "course_name": "Python Full Stack",
+    "description": "Learn frontend and backend web development",
+    "instructor": "Meera",
+    "duration": 90,
+    "fee": "15000.00",
+    "category": "Full Stack Development"
+}
+
+###
+GET http://127.0.0.1:8000/courses/1/
+Accept: application/json
+
+###
+PUT http://127.0.0.1:8000/courses/3/
+Content-Type: application/json
+
+{
+    "course_name": "Advanced Python",
+    "description": "Learn advanced Python concepts and programming",
+    "instructor": "Anu",
+    "duration": 45,
+    "fee": "6500.00",
+    "category": "Programming"
+}
+
+###
+DELETE http://127.0.0.1:8000/courses/2/
+
+
+###
+GET http://127.0.0.1:8000/enrollments/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/enrollments/
+Content-Type: application/json
+
+{
+    "course_id": 5,
+    "student_name": "Meera",
+    "payment_status": "Pending",
+    "remarks": "Awaiting payment"
+
+}
+
+###
+GET http://127.0.0.1:8000/enrollments/3/
+Accept: application/json
+
+
+###
+POST http://127.0.0.1:8000/enrollments/
+Content-Type: application/json
+
+{
+    "course_id": 1,
+    "student_name": "Anu"
+   
+}
+
+###
+PUT http://127.0.0.1:8000/enrollments/2/evaluate/
+Content-Type: application/json
+
+{
+    "progress": 2,
+    "payment_status": "Paid",
+    "remarks": "Course evaluation completed"
+}
